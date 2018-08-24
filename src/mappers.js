@@ -5,8 +5,7 @@ export function mapServerData(serverData) {
       id: index,
       type: "Feature",
       isActive: obj.isActive,
-      geometry:
-      {
+      geometry: {
         type: "Point",
         coordinates: [obj.lat, obj.long]
       },

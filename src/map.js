@@ -16,7 +16,6 @@ export function initMap(ymaps, containerId) {
 
   const objectManager = new ymaps.ObjectManager({
     clusterize: true,
-    clusterHasBalloon: false,
     gridSize: 64,
     clusterIconLayout: 'default#pieChart',
     clusterDisableClickZoom: false,
@@ -41,7 +40,6 @@ export function initMap(ymaps, containerId) {
     if (!obj.properties.details) {
       loadDetails(objectId).then(data => {
         obj.properties.details = data;
-        objectManager.objects.balloon.setData(obj);
       });
     }
   };
