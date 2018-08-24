@@ -2,12 +2,11 @@ export function createFilterControl(ymaps) {
   const items = [
     { title: 'Active', value: 'active' },
     { title: 'Defective', value: 'defective' }
-  ].map(
-    obj =>
-      new ymaps.control.ListBoxItem({
-        data: { content: obj.title, value: obj.value },
-        state: { selected: true }
-      })
+  ].map(obj =>
+    new ymaps.control.ListBoxItem({
+      data: { content: obj.title, value: obj.value },
+      state: { selected: true }
+    })
   );
 
   const listBoxControl = new ymaps.control.ListBox({
